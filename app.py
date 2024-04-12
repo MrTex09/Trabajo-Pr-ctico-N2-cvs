@@ -39,7 +39,7 @@ try:
         valores = [loc["provincia"], loc["id"], loc["localidad"], loc["cp"], loc["id_prov_mstr"]]
         cursor.execute(insert_localidades, valores)
     db.commit()
-    print("Registros insertados con exito.")
+    print("Registros  fueron insertadoscon exito")
 
     #7provincias junto a  la cantidad de localidades de cada una
     cursor.execute(select_all_provinces)
@@ -55,9 +55,9 @@ try:
             writer = csv.writer(file)   
             writer.writerow(cabecera)
             writer.writerows(locs)
-            writer.writerow(["Total de localidades: " + str(provinces_localities[prov])])
+            writer.writerow(["la totalidad de localidades: " + str(provinces_localities[prov])])
 
-    print("CSVs creados con exito.")
+    print("Los CSVs han sido  creados con exito.")
 
 except Exception as e:
     print("Error: ", e)
